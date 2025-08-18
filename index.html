@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <title>Johann Albrecht – Regent von Braunschweig</title>
   <style>
-   body {
+  body {
   font-family: Arial, sans-serif;
   margin: 0; padding: 0;
-  line-height: 1.8;           /* Чуть больше межстрочный интервал */
-  font-size: 22px;            /* Текст покрупнее */
+  line-height: 1.8;
+  font-size: 22px;               /* Текст покрупнее */
   background-color: #fff; 
   color: #000;
 }
@@ -21,14 +21,15 @@ h2 { font-size: 44px; margin-top: 1.4em; }
   top: 20px;
   right: 20px;
   z-index: 999;
-  display: flex;
-  flex-direction: column;     /* Кнопки теперь в колонку */
-  gap: 12px;                  /* Расстояние между кнопками */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 кнопки в ряд */
+  gap: 12px;                             /* Расстояние между кнопками */
+  width: 720px;                          /* Чтобы три кнопки в ряд влезли красиво */
 }
 
 .lang-switch button {
-  width: 220px;               /* Все кнопки одинаковой ширины */
-  height: 70px;               /* Все кнопки одинаковой высоты */
+  width: 220px;
+  height: 70px;
   background-color: transparent;
   border: 2px solid black;
   color: black;
@@ -47,7 +48,7 @@ h2 { font-size: 44px; margin-top: 1.4em; }
 #content-container {
   position: relative;
   max-width: 960px;
-  margin: 160px auto 40px auto;   /* ← отступ сверху больше, чтобы текст не прилипал к кнопкам */
+  margin: 220px auto 40px auto;   /* ← опустили текст ниже (220px сверху) */
   padding: 20px;
 }
 
@@ -68,6 +69,7 @@ h2 { font-size: 44px; margin-top: 1.4em; }
   pointer-events: auto;
   position: relative;
 }
+
 
 
     .audio-button { position: fixed; top: 160px; right: 80px; z-index: 1000; transition: opacity 0.4s ease; }
