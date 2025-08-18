@@ -4,37 +4,71 @@
   <meta charset="UTF-8">
   <title>Johann Albrecht – Regent von Braunschweig</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      line-height: 1.6; font-size: 20px;
-      background-color: #fff; color: #000;
-    }
-    h1 { font-size: 46px; margin-top: 1.5em; }
-    h2 { font-size: 42px; margin-top: 1.2em; }
+   body {
+  font-family: Arial, sans-serif;
+  margin: 0; padding: 0;
+  line-height: 1.8;           /* Чуть больше межстрочный интервал */
+  font-size: 22px;            /* Текст покрупнее */
+  background-color: #fff; 
+  color: #000;
+}
 
-    .lang-switch {
-      position: fixed; top: 20px; right: 20px; z-index: 999;
-    }
-    .lang-switch button {
-      background-color: transparent; border: 2px solid black; color: black;
-      padding: 20px 30px; margin-left: 10px; font-size: 32px; font-weight: bold;
-      cursor: pointer; border-radius: 10px;
-      transition: background-color 0.4s ease, color 0.4s ease;
-    }
-    .lang-switch button:hover { background-color: black; color: white; }
+h1 { font-size: 48px; margin-top: 1.5em; }
+h2 { font-size: 44px; margin-top: 1.4em; }
 
-    #content-container { position: relative; min-height: 1200px; }
+.lang-switch {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;     /* Кнопки теперь в колонку */
+  gap: 12px;                  /* Расстояние между кнопками */
+}
 
-    .lang-section {
-      opacity: 0; visibility: hidden; pointer-events: none;
-      transition: opacity 0.6s ease, visibility 0.6s ease;
-      padding: 40px 20px; max-width: 960px; margin: auto; width: 100%;
-      position: absolute; top: 0; left: 0;
-    }
-    .lang-section.active {
-      opacity: 1; visibility: visible; pointer-events: auto; position: relative;
-    }
+.lang-switch button {
+  width: 220px;               /* Все кнопки одинаковой ширины */
+  height: 70px;               /* Все кнопки одинаковой высоты */
+  background-color: transparent;
+  border: 2px solid black;
+  color: black;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.lang-switch button:hover {
+  background-color: black;
+  color: white;
+}
+
+#content-container {
+  position: relative;
+  max-width: 960px;
+  margin: 160px auto 40px auto;   /* ← отступ сверху больше, чтобы текст не прилипал к кнопкам */
+  padding: 20px;
+}
+
+.lang-section {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.lang-section.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  position: relative;
+}
+
 
     .audio-button { position: fixed; top: 160px; right: 80px; z-index: 1000; transition: opacity 0.4s ease; }
     .audio-button img { width: 196px; height: 196px; }
