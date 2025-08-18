@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Johann Albrecht – Regent von Braunschweig</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      line-height: 1.6; font-size: 20px;
+      background-color: #fff; color: #000;
+    }
+    h1 { font-size: 46px; margin-top: 1.5em; }
+    h2 { font-size: 42px; margin-top: 1.2em; }
+
+    .lang-switch {
+      position: fixed; top: 20px; right: 20px; z-index: 999;
+    }
+    .lang-switch button {
+      background-color: transparent; border: 2px solid black; color: black;
+      padding: 20px 30px; margin-left: 10px; font-size: 32px; font-weight: bold;
+      cursor: pointer; border-radius: 10px;
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+    .lang-switch button:hover { background-color: black; color: white; }
+
+    #content-container { position: relative; min-height: 1200px; }
+
+    .lang-section {
+      opacity: 0; visibility: hidden; pointer-events: none;
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+      padding: 40px 20px; max-width: 960px; margin: auto; width: 100%;
+      position: absolute; top: 0; left: 0;
+    }
+    .lang-section.active {
+      opacity: 1; visibility: visible; pointer-events: auto; position: relative;
+    }
+
+    .audio-button { position: fixed; top: 160px; right: 80px; z-index: 1000; transition: opacity 0.4s ease; }
+    .audio-button img { width: 196px; height: 196px; }
+
+    .speaker-icon {
+      width: 56px; height: 56px; vertical-align: middle;
+      cursor: pointer; margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="lang-switch">
+    <button onclick="switchLanguage('de')">Deutsch</button>
+    <button onclick="switchLanguage('en')">English</button>
+    <button onclick="switchLanguage('fr')">Français</button>
+    <button onclick="switchLanguage('es')">Español</button>
+    <button onclick="switchLanguage('it')">Italiano</button>
+    <button onclick="switchLanguage('nl')">Nederlands</button>
+  </div>
+
+  <div id="content-container">
+    <!-- DE -->
+    <div id="de" class="lang-section active">
+      <h2>Der braunschweigische Regent Johann Albrecht, Herzog zu Mecklenburg
+        <img class="speaker-icon" data-index="0" src="img/speaker0.png" alt="Play">
+      </h2>
+      <p>Johann Albrecht, Herzog zu Mecklenburg (1857–1920) und von 1907 bis 1913 Regent des Herzogtums Braunschweig, war auf vielfältige Weise mit der imperialistischen Kolonialgeschichte des Deutschen Reiches verknüpft. Von 1895 bis 1920 war er Präsident der Deutschen Kolonialgesellschaft, ein Verein mit ca. 40.000 Mitgliedern.</p>
+      <p>In dieser Funktion warb Herzog Johann Albrecht um die Auswanderung deutscher Siedler in die afrikanischen Kolonien und befürwortete die Rassentrennung und Diskriminierung der indigenen Bevölkerung. Er war ein Repräsentant und Unterstützer der rassistischen Politik des Deutschen Kaiserreichs. Über die Schattenseiten deutscher Kolonialherrschaft – die Rücksichtslosigkeit und Verbrechen des Militärs sowie die Ausbeutung der Einheimischen – war Johann Albrecht unterrichtet.</p>
+    </div>
+
+    <!-- EN -->
+    <div id="en" class="lang-section">
+      <h2>The Brunswick Regent Johann Albrecht, Duke of Mecklenburg
+        <img class="speaker-icon" data-index="0" src="img/speaker0.png" alt="Play">
+      </h2>
+      <p>Johann Albrecht, Duke of Mecklenburg (1857–1920) and, from 1907 to 1913, regent of the Duchy of Brunswick, was closely intertwined in many ways with the imperialist colonial history of the German Empire. From 1895 to 1920 he served as president of the German Colonial Society, an association with around 40,000 members.</p>
+      <p>In this capacity, Duke Johann Albrecht promoted the emigration of German settlers to the African colonies and advocated racial segregation and the discrimination of Indigenous populations. He was a representative and supporter of the German Empire’s racist policies. Johann Albrecht was informed about the darker sides of German colonial rule—the ruthlessness and crimes of the military and the exploitation of local people.</p>
+    </div>
+
+    <!-- FR -->
+    <div id="fr" class="lang-section">
+      <h2>Le régent de Brunswick Johann Albrecht, duc de Mecklembourg
+        <img class="speaker-icon" data-index="0" src="img/speaker0.png" alt="Lire">
+      </h2>
+      <p>Johann Albrecht, duc de Mecklembourg (1857–1920) et, de 1907 à 1913, régent du duché de Brunswick, était lié de multiples façons à l’histoire coloniale impérialiste de l’Empire allemand. De 1895 à 1920, il fut président de la Société coloniale allemande, une association comptant environ 40&nbsp;000 membres.</p>
+      <p>À ce titre, le duc Johann Albrecht encouragea l’émigration de colons allemands vers les colonies africaines et défendit la ségrégation raciale ainsi que la discrimination des populations autochtones. Il fut un représentant et un soutien des politiques racistes de l’Empire allemand. Johann Albrecht était informé des zones d’ombre de la domination coloniale allemande — l’impitoyabilité et les crimes de l’armée ainsi que l’exploitation des populations locales.</p>
+    </div>
+
+    <!-- ES -->
+    <div id="es" class="lang-section">
+      <h2>El regente de Brunswick Johann Albrecht, duque de Mecklemburgo
+        <img class="speaker-icon" data-index="0" src="img/speaker0.png" alt="Reproducir">
+      </h2>
+      <p>Johann Albrecht, duque de Mecklemburgo (1857–1920) y, entre 1907 y 1913, regente del ducado de Brunswick, estuvo vinculado de múltiples maneras a la historia colonial imperialista del Imperio alemán. De 1895 a 1920 fue presidente de la Sociedad Colonial Alemana, una asociación con unos 40.000 miembros.</p>
+      <p>En esa función, el duque Johann Albrecht promovió la emigración de colonos alemanes a las colonias africanas y defendió la segregación racial y la discriminación de la población indígena. Fue un representante y partidario de las políticas racistas del Imperio alemán. Johann Albrecht estaba al tanto de los aspectos oscuros del dominio colonial alemán —la falta de escrúpulos y los crímenes del ejército, y la explotación de la población local—.</p>
+    </div>
+
+    <!-- IT -->
+    <div id="it" class="lang-section">
+      <h2>Il reggente di Brunswick Johann Albrecht, duca di Meclemburgo
+        <img class="speaker-icon" data-index="0" src="img/speaker0.png" alt="Riproduci">
+      </h2>
+      <p>Johann Albrecht, duca di Meclemburgo (1857–1920) e, dal 1907 al 1913, reggente del ducato di Brunswick, fu legato in molti modi alla storia coloniale imperialista dell’Impero tedesco. Dal 1895 al 1920 fu presidente della Società Coloniale Tedesca, un’associazione con circa 40.000 membri.</p>
+      <p>In tale ruolo, il duca Johann Albrecht promosse l’emigrazione di coloni tedeschi nelle colonie africane e sostenne la segregazione razziale e la discriminazione delle popolazioni indigene. Fu un rappresentante e sostenitore delle politiche razziste dell’Impero tedesco. Johann Albrecht era informato dei lati oscuri del dominio coloniale tedesco — la spietatezza e i crimini dell’esercito e lo sfruttamento delle popolazioni locali.</p>
+    </div>
+
+    <!-- NL -->
+    <div id="nl" class="lang-section">
+      <h2>De Brunswijkse regent Johann Albrecht, hertog van Mecklenburg
+        <img class="speaker-icon" data-index="0" src="img/speaker0.png" alt="Afspelen">
+      </h2>
+      <p>Johann Albrecht, hertog van Mecklenburg (1857–1920) en van 1907 tot 1913 regent van het hertogdom Brunswijk, was op uiteenlopende manieren verbonden met de imperialistische koloniale geschiedenis van het Duitse Keizerrijk. Van 1895 tot 1920 was hij voorzitter van de Duitse Koloniale Maatschappij, een vereniging met circa 40.000 leden.</p>
+      <p>In deze functie stimuleerde hertog Johann Albrecht de emigratie van Duitse kolonisten naar de Afrikaanse koloniën en bepleitte hij rassenscheiding en discriminatie van de inheemse bevolking. Hij was een vertegenwoordiger en supporter van het racistische beleid van het Duitse Keizerrijk. Johann Albrecht was op de hoogte van de schaduwzijden van het Duitse koloniale bewind — de meedogenloosheid en misdaden van het leger en de uitbuiting van de lokale bevolking.</p>
+    </div>
+  </div>
+
+  <!-- скрытый аудиоплеер -->
+  <audio id="audioPlayer" src=""></audio>
+
+  <script>
+    let currentLang = 'de';
+
+    function switchLanguage(lang) {
+      if (lang === currentLang) return;
+      const oldSection = document.getElementById(currentLang);
+      const newSection = document.getElementById(lang);
+      oldSection.classList.remove('active');
+      newSection.classList.add('active');
+      currentLang = lang;
+    }
+
+    const audioPlayer = new Audio();
+    let currentIcon = null;
+
+    // один текст на язык -> индекс 0
+    document.querySelectorAll('.speaker-icon').forEach(icon => {
+      icon.addEventListener('click', () => {
+        const index = parseInt(icon.getAttribute('data-index')) || 0;
+
+        // если та же иконка — остановить
+        if (currentIcon === icon && !audioPlayer.paused) {
+          audioPlayer.pause();
+          audioPlayer.currentTime = 0;
+          icon.src = 'img/speaker0.png';
+          currentIcon = null;
+          return;
+        }
+
+        // если играло что-то другое — сбросить
+        if (currentIcon && currentIcon !== icon) {
+          currentIcon.src = 'img/speaker0.png';
+          audioPlayer.pause();
+          audioPlayer.currentTime = 0;
+        }
+
+        const filePath = `audio/${currentLang}/${index + 1}.mp3`;
+        audioPlayer.src = filePath;
+        audioPlayer.play().then(() => {
+          icon.src = 'img/speaker.png';
+          currentIcon = icon;
+        }).catch(err => {
+          // на случай, если файла нет
+          console.warn('Audio play error:', err);
+          icon.src = 'img/speaker0.png';
+          currentIcon = null;
+        });
+      });
+    });
+
+    audioPlayer.addEventListener('ended', () => {
+      if (currentIcon) {
+        currentIcon.src = 'img/speaker0.png';
+        currentIcon = null;
+      }
+    });
+  </script>
+</body>
+</html>
